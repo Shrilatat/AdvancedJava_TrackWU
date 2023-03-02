@@ -1,0 +1,30 @@
+AOP - Aspect Oriented Programming
+
+DataSource? Factory for DB Connections
+
+Connection conn = DriverManager.getConnection(url, username, password)
+
+
+Connection conn =  DataSource.getConnection()
+
+
+select ename from emp where empid = 101
+
+
+
+config file:
+
+basicspring-servlet.xml
+
+<name-of-servlet>-servlet.xml
+
+
+
+
+
+
+
+
+
+
+
