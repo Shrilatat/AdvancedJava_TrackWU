@@ -1,0 +1,191 @@
+wujava
+Intellij Ultimate edition
+
+Framework - is a set of classes and interfaces
+lib - is a set of classes and interfaces
+
+import java.util.*
+
+class Demo{
+
+    List  l = new LinkedList();
+
+
+Framework - is prebuilt semi-built structure
+
+
+
+Java/JEE
+
+MVC FW : Spring MVC, Struts , make life of a web dev easier
+Persistent/ ORM FW : Hibernate, TopLink, EclipseLink, IBatis make life of a JDBC dev easier
+Testing FW : JUnit, NUnit, Cactus, HTTPUnit  make life of a Java dev easier
+Logging FW : Log4j, SLF4j  
+Security FW : Spring Security
+Application FW : Spring!!!
+
+
+
+Rules a Bean?
+- Must be in a package
+- def no-arg cons
+- attributes : camelcase eg empFirstName, empName, bookId, bookAuthor
+- get/set methods
+
+
+
+Configure Bean:
+
+- XML based configuration (config.xml)
+- Annotation based 
+- Java based (.java)
+
+<bean   id=""   class="" >
+
+Factory Design Pattern - 
+
+BeanFactory (I)
+
+
+
+Dependency Injection:
+- setter method injection
+- constructor Injection
+
+
+BeanFactory factory = new XmlBeanFactory(new Resource("config.xml"))
+
+class A{
+   int i;
+   
+ ---------
+
+
+class A{
+
+  B b;
+
+    setB(B newB), getB()
+
+  
+
+  m1(){
+     b.service();
+  }
+}
+
+--------------------------
+class B{
+
+    service(){...}
+}
+
+
+----------------------
+
+
+
+
+
+class Book{
+   int bid;
+   Author author;
+   String bookName;
+}
+
+
+<bean   id="b1"   class="com.trg.Emp">   //Every bean in spring container is a singleton
+<bean   id="b2"   class="com.trg.Emp"> 
+<bean   id="b3"   class="com.trg.Emp"> 
+
+
+
+singleton - only one instance exists in container
+
+getBean("b1")  same instance
+getBean("b1")same instance
+getBean("b1")same instance
+getBean("b1")same instance
+
+
+<bean   id="b1"   class="com.trg.Emp"   scope="prototype">
+
+Emp e1 = getBean("b1") new instance
+Emp e2 = getBean("b1") new instance
+Emp e3 = getBean("b1") new instance
+getBean("b1") new instance
+getBean("b1") new instance
+
+
+
+<bean   id="b1"   class="com.trg.Emp"> 
+
+Emp b1 = new Emp();
+
+
+<list> --- List
+<set>  ---- Set
+<map>  ----- Map
+<props> ---- Property
+
+<k,v>  <String, String>, <String, Emp>
+<k,v>  <String,String>
+
+Property p = new Property();
+p.put("aa","bbb");
+
+p.put(,)
+
+
+
+
+class Emp{...}
+
+Emp e1 = new Emp();
+
+class MyServlet extends HttpServelt{...}
+
+
+class SpringBean{...}  "Spring Managed beans"
+
+
+
+
+
+
+
+
+
+@Autowired
+@Component  -- class level anno
+@Required
+@Value
+
+
+user.properties  -- notepad
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
