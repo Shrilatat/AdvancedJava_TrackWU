@@ -1,0 +1,98 @@
+Webservice - service available over the web
+application centric
+data - json, xml, plain text
+
+
+Web application - application available over the web
+human centric
+HTML
+
+
+Webservice:
+- SOAP-based WS  (heavy-WS)  XXX
+- REST ful WS
+
+
+REST ful WS:
+1) static and dynamic resource (URL)
+
+static URL XXXXXX
+http://www.someServer.com/images/sun.gif
+http://www.someServer.com/myapp/welcome.html
+http://www.someServer.com/myapp/reg.pdf
+http://www.someServer.com/myapp/mymusic.wav
+
+dynamic URL
+
+Action-oriented (verb)
+
+http://www.TechArticles.com/myapp/articles/getArticle?id=12345
+http://www.TechArticles.com/myapp/articles/deleteArticle?id=12345
+http://www.TechArticles.com/myapp/articles/addArticle
+http://www.TechArticles.com/myapp/articles/updateArticle?id=12345
+
+
+
+2) RESTful URL:  (noun/resource oriented)
+
+
+http://www.TechArticles.com/myapp/articles?id=12345  + DELETE
+
+http://www.TechArticles.com/myapp/articles/12345
+
+
+3) HTTP methods (W3G):
+- get   : Read
+- post  :  Create 
+- delete : Delete
+- put   : Update
+
+CRUD
+
+4) REpresentational State Transfer
+
+
+
+
+@Controller
+@RequestMapping
+@RequestParam("username") String uname
+@GetMapping
+@PostMapping
+@PutMapping
+@DeleteMapping
+@PathVaribale
+
+
+String uname = request.getParameter("username")
+
+
+
+
+
+http://localhost:8080/WUWebApp/greetUser?uid=101&username=Priyanshu
+
+ @RequestParam("uid") int uid, @RequestParam("username") String uname
+
+String uname = request.getParameter("username")
+
+
+http://localhost:8080/WUWebApp/greetUser/Meera
+
+@GetMapping("/greetUser/{un}")
+
+public String m1(@PathVariable String un){}
+
+
+
+
+Presentation logic + Application Logic + Databse Logic  (DAO)  ---> DB
+
+
+
+
+
+
+
+
+
